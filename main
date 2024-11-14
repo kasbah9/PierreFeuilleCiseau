@@ -1,0 +1,37 @@
+from random import randint
+
+outil = {0:"pierre", 1:"feuille", 2:"ciseau",}
+
+joueur = input('Entrez votre choix : ')
+
+nombre = randint(0,2)
+
+robot = outil[nombre]
+
+print("Votre choix : " + joueur)
+print("Mon choix : " + robot)
+
+if robot == joueur :
+    print("Y'a égalite bouffon")
+
+elif robot == 'pierre' and joueur == 'ciseau':
+    print(f'Tu as perdu gros caca, sa réponse était {robot}.')
+
+elif robot == "pierre" and joueur == 'feuille':
+    print(f"Tu as gagné bogoss, le golmon de bot a choisi {robot}.")
+
+elif robot == "feuille" and joueur == 'ciseau':
+    print(f"Tu as gagné bogoss, le golmon de bot a choisi {robot}.")
+
+elif robot == "feuille" and joueur == 'pierre':
+    print(f'Tu as perdu gros caca, sa réponse était {robot}.')
+
+elif robot == "ciseau" and joueur == 'pierre':
+    print(f"Tu as gagné bogoss, le golmon de bot a choisi {robot}.")
+
+elif robot == "ciseau" and joueur == 'feuille':
+    print(f'Tu as perdu gros caca, sa réponse était {robot}.')
+
+else :
+    print("T'as pas choisi parmis les choix golmon (sinon vérifie l'orthographe et les majuscules).")
+
